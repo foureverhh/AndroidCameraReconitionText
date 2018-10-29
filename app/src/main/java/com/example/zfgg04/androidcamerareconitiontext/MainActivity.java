@@ -1,7 +1,9 @@
 package com.example.zfgg04.androidcamerareconitiontext;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
+import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -107,6 +109,9 @@ public class MainActivity extends AppCompatActivity {
                                 TextBlock item = items.valueAt(i);
                                 stringBuilder.append(item.getValue());
                                 stringBuilder.append("\n");
+                                Vibrator vibrator = (Vibrator) getApplicationContext()
+                                        .getSystemService(Context.VIBRATOR_SERVICE);
+                                vibrator.vibrate(1000);
                             }
                             textView.setText(stringBuilder.toString());
                         }
