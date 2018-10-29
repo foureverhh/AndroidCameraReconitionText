@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidCameraReconitionText</string>
+    <string name="default_text">No text</string>
 </resources>
